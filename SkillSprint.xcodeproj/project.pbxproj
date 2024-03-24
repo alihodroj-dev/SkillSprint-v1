@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */; };
-		19DC681E2BAFC5DA002E16D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC681D2BAFC5DA002E16D2 /* ContentView.swift */; };
 		19DC68202BAFC5DC002E16D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */; };
 		19DC68232BAFC5DC002E16D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC68222BAFC5DC002E16D2 /* Preview Assets.xcassets */; };
+		19DC682B2BAFC757002E16D2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC682A2BAFC757002E16D2 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19DC68182BAFC5DA002E16D2 /* SkillSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSprintApp.swift; sourceTree = "<group>"; };
-		19DC681D2BAFC5DA002E16D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19DC68222BAFC5DC002E16D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19DC682A2BAFC757002E16D2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		19DC681A2BAFC5DA002E16D2 /* SkillSprint */ = {
 			isa = PBXGroup;
 			children = (
+				19DC68292BAFC741002E16D2 /* Views */,
 				19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */,
-				19DC681D2BAFC5DA002E16D2 /* ContentView.swift */,
 				19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */,
 				19DC68212BAFC5DC002E16D2 /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				19DC68222BAFC5DC002E16D2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19DC68292BAFC741002E16D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19DC682A2BAFC757002E16D2 /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DC681E2BAFC5DA002E16D2 /* ContentView.swift in Sources */,
+				19DC682B2BAFC757002E16D2 /* LoginView.swift in Sources */,
 				19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +283,16 @@
 				DEVELOPMENT_TEAM = SJRUCMU4G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SkillSprint;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +317,16 @@
 				DEVELOPMENT_TEAM = SJRUCMU4G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SkillSprint;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
