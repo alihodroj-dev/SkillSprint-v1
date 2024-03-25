@@ -9,9 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
-    @State var presentSignUp = false
+    // viewModel
+    @ObservedObject private var vm: LoginViewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -43,7 +42,7 @@ struct LoginView: View {
                         Image(systemName: "at")
                             .foregroundStyle(.gray)
                             .font(.title2)
-                        TextField("", text: $email)
+                        TextField("", text: $vm.emailFieldValue)
                             .frame(maxWidth: .infinity)
                             .frame(height: 35)
                             .background {
@@ -61,7 +60,7 @@ struct LoginView: View {
                         Image(systemName: "lock")
                             .foregroundStyle(.gray)
                             .font(.title2)
-                        TextField("", text: $password)
+                        TextField("", text: $vm.passwordFieldValue)
                             .frame(maxWidth: .infinity)
                             .frame(height: 35)
                             .background {
@@ -83,7 +82,7 @@ struct LoginView: View {
                 // MARK: login and signup buttons
                 VStack(spacing: 5) {
                     Button {
-                        
+                        // todo
                     } label: {
                         Text("Login")
                             .bold()
@@ -106,7 +105,7 @@ struct LoginView: View {
                     .padding(.horizontal, 20)
                     
                     Button {
-                        self.presentSignUp = true
+                        vm.presentingSignUpView.toggle()
                     } label: {
                         Text("Sign Up")
                             .bold()
@@ -124,7 +123,7 @@ struct LoginView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .background { Color.white.ignoresSafeArea() }
             .padding(.vertical)
-            .navigationDestination(isPresented: $presentSignUp) { SignUpView() }
+            .navigationDestination(isPresented: $vm.presentingSignUpView) { SignUpView() }
         }
     }
 }

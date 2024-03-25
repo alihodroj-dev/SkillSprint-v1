@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AF6B492BB22B7100C2CF32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */; };
+		19AF6B4B2BB22C7B00C2CF32 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */; };
 		19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */; };
 		19DC68202BAFC5DC002E16D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */; };
 		19DC68232BAFC5DC002E16D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC68222BAFC5DC002E16D2 /* Preview Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		19DC68182BAFC5DA002E16D2 /* SkillSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSprintApp.swift; sourceTree = "<group>"; };
 		19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19AF6B472BB22B5E00C2CF32 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */,
+				19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		19DC680F2BAFC5DA002E16D2 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */,
+				19AF6B472BB22B5E00C2CF32 /* ViewModels */,
 				19DC68292BAFC741002E16D2 /* Views */,
 				19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */,
 				19DC68212BAFC5DC002E16D2 /* Preview Content */,
@@ -148,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AF6B492BB22B7100C2CF32 /* LoginViewModel.swift in Sources */,
 				19DC682B2BAFC757002E16D2 /* LoginView.swift in Sources */,
+				19AF6B4B2BB22C7B00C2CF32 /* SignUpViewModel.swift in Sources */,
 				19DC682D2BB12E4A002E16D2 /* SignUpView.swift in Sources */,
 				19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */,
 			);

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @State var email = ""
-    @State var password = ""
+    // viewModel
+    @ObservedObject private var vm: SignUpViewModel = SignUpViewModel()
     
     var body: some View {
         VStack(spacing: 40) {
@@ -41,7 +41,7 @@ struct SignUpView: View {
                     Image(systemName: "person")
                         .foregroundStyle(.gray)
                         .font(.title2)
-                    TextField("", text: $password)
+                    TextField("", text: $vm.nameFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
                         .background {
@@ -59,7 +59,7 @@ struct SignUpView: View {
                     Image(systemName: "at")
                         .foregroundStyle(.gray)
                         .font(.title2)
-                    TextField("", text: $email)
+                    TextField("", text: $vm.emailFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
                         .background {
@@ -77,7 +77,7 @@ struct SignUpView: View {
                     Image(systemName: "lock")
                         .foregroundStyle(.gray)
                         .font(.title2)
-                    TextField("", text: $password)
+                    TextField("", text: $vm.passwordFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
                         .background {
@@ -95,7 +95,7 @@ struct SignUpView: View {
                     Image(systemName: "checkmark")
                         .foregroundStyle(.gray)
                         .font(.title2)
-                    TextField("", text: $password)
+                    TextField("", text: $vm.confirmPasswordFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
                         .background {
