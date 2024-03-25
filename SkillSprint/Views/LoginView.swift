@@ -45,6 +45,7 @@ struct LoginView: View {
                         TextField("", text: $vm.emailFieldValue)
                             .frame(maxWidth: .infinity)
                             .frame(height: 35)
+                            .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
                                     Text("Email")
@@ -63,6 +64,7 @@ struct LoginView: View {
                         TextField("", text: $vm.passwordFieldValue)
                             .frame(maxWidth: .infinity)
                             .frame(height: 35)
+                            .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
                                     Text("Password")

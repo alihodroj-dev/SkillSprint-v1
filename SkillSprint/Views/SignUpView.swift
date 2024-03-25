@@ -44,6 +44,7 @@ struct SignUpView: View {
                     TextField("", text: $vm.nameFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
+                        .foregroundStyle(.black)
                         .background {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text("Name")
@@ -62,6 +63,7 @@ struct SignUpView: View {
                     TextField("", text: $vm.emailFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
+                        .foregroundStyle(.black)
                         .background {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text("Email")
@@ -80,6 +82,7 @@ struct SignUpView: View {
                     TextField("", text: $vm.passwordFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
+                        .foregroundStyle(.black)
                         .background {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text("Password")
@@ -98,6 +101,7 @@ struct SignUpView: View {
                     TextField("", text: $vm.confirmPasswordFieldValue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 35)
+                        .foregroundStyle(.black)
                         .background {
                             VStack(alignment: .leading, spacing: 5) {
                                 Text("Confirm Password")
