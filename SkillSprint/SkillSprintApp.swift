@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct SkillSprintApp: App {
+    
+    init() {
+        // configuring firebase
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             LoginView()

@@ -37,6 +37,7 @@
 		19AF6B802BB2328600C2CF32 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 19AF6B7F2BB2328600C2CF32 /* FirebaseRemoteConfigSwift */; };
 		19AF6B822BB2328600C2CF32 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 19AF6B812BB2328600C2CF32 /* FirebaseStorage */; };
 		19AF6B842BB2328600C2CF32 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 19AF6B832BB2328600C2CF32 /* FirebaseStorageCombine-Community */; };
+		19AF6B872BB3ADEA00C2CF32 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF6B862BB3ADEA00C2CF32 /* FirebaseManager.swift */; };
 		19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */; };
 		19DC68202BAFC5DC002E16D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */; };
 		19DC68232BAFC5DC002E16D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DC68222BAFC5DC002E16D2 /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		19AF6B4C2BB2302900C2CF32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19AF6B862BB3ADEA00C2CF32 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		19DC68182BAFC5DA002E16D2 /* SkillSprint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillSprint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillSprintApp.swift; sourceTree = "<group>"; };
 		19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		19AF6B852BB3ADC500C2CF32 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19AF6B862BB3ADEA00C2CF32 /* FirebaseManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		19DC680F2BAFC5DA002E16D2 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 				19DC681B2BAFC5DA002E16D2 /* SkillSprintApp.swift */,
 				19AF6B472BB22B5E00C2CF32 /* ViewModels */,
 				19DC68292BAFC741002E16D2 /* Views */,
+				19AF6B852BB3ADC500C2CF32 /* Helpers */,
 				19DC681F2BAFC5DC002E16D2 /* Assets.xcassets */,
 				19DC68212BAFC5DC002E16D2 /* Preview Content */,
 			);
@@ -252,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AF6B872BB3ADEA00C2CF32 /* FirebaseManager.swift in Sources */,
 				19AF6B492BB22B7100C2CF32 /* LoginViewModel.swift in Sources */,
 				19DC682B2BAFC757002E16D2 /* LoginView.swift in Sources */,
 				19AF6B4B2BB22C7B00C2CF32 /* SignUpViewModel.swift in Sources */,
