@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1949C2022BBA58BA00967D9F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949C2012BBA58B900967D9F /* LoadingView.swift */; };
+		1949C2042BBA58C700967D9F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949C2032BBA58C700967D9F /* HomeView.swift */; };
+		19AD675C2BC241B0003D1AF7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD675B2BC241B0003D1AF7 /* HomeViewModel.swift */; };
 		19AF6B492BB22B7100C2CF32 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */; };
 		19AF6B4B2BB22C7B00C2CF32 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */; };
 		19AF6B4D2BB2302900C2CF32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19AF6B4C2BB2302900C2CF32 /* GoogleService-Info.plist */; };
@@ -46,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1949C2012BBA58B900967D9F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1949C2032BBA58C700967D9F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		19AD675B2BC241B0003D1AF7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		19AF6B4C2BB2302900C2CF32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			children = (
 				19AF6B482BB22B7100C2CF32 /* LoginViewModel.swift */,
 				19AF6B4A2BB22C7B00C2CF32 /* SignUpViewModel.swift */,
+				19AD675B2BC241B0003D1AF7 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 			children = (
 				19DC682A2BAFC757002E16D2 /* LoginView.swift */,
 				19DC682C2BB12E4A002E16D2 /* SignUpView.swift */,
+				1949C2012BBA58B900967D9F /* LoadingView.swift */,
+				1949C2032BBA58C700967D9F /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,10 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AF6B872BB3ADEA00C2CF32 /* FirebaseManager.swift in Sources */,
+				19AD675C2BC241B0003D1AF7 /* HomeViewModel.swift in Sources */,
 				19AF6B492BB22B7100C2CF32 /* LoginViewModel.swift in Sources */,
 				19DC682B2BAFC757002E16D2 /* LoginView.swift in Sources */,
 				19AF6B4B2BB22C7B00C2CF32 /* SignUpViewModel.swift in Sources */,
 				19DC682D2BB12E4A002E16D2 /* SignUpView.swift in Sources */,
+				1949C2042BBA58C700967D9F /* HomeView.swift in Sources */,
+				1949C2022BBA58BA00967D9F /* LoadingView.swift in Sources */,
 				19DC681C2BAFC5DA002E16D2 /* SkillSprintApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

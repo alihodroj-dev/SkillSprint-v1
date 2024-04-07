@@ -21,10 +21,13 @@ class LoginViewModel: ObservableObject {
     @Published var isShowingError: Bool = false
     @Published var errorMessage: String = ""
     
-    func login() {
+    // login function
+    func login(handler: @escaping (Bool) -> Void) {
         if(!emailFieldValue.isEmpty && !passwordFieldValue.isEmpty) {
             FireBaseManager.shared.loginInUser(emailValue: emailFieldValue, passwordValue: passwordFieldValue) { result in
-                if(!result) {
+                if(result) {
+                    handler(true)
+                } else {
                     self.showError("Wrong email or password")
                 }
             }
@@ -33,6 +36,7 @@ class LoginViewModel: ObservableObject {
         }
     }
     
+    // helper
     private func showError(_ message: String) {
         self.errorMessage = message
         withAnimation(.spring) {

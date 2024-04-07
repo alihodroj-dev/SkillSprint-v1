@@ -18,7 +18,8 @@ struct SkillSprintApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            LoadingView()
+                .preferredColorScheme(.light)
         }
     }
 }

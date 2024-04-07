@@ -12,6 +12,9 @@ struct LoginView: View {
     // viewModel
     @ObservedObject private var vm: LoginViewModel = LoginViewModel()
     
+    // navigation
+    @Binding var isLoggedIn: Bool
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -99,7 +102,11 @@ struct LoginView: View {
                     VStack(spacing: 2) {
                         // login
                         Button {
-                            vm.login()
+                            vm.login { result in
+                                withAnimation(.bouncy) {
+                                    isLoggedIn = result
+                                }
+                            }
                         } label: {
                             Text("Login")
                                 .bold()
@@ -139,12 +146,13 @@ struct LoginView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding(.vertical, 25)
-                .navigationDestination(isPresented: $vm.presentingSignUpView) { SignUpView() }
+                .navigationDestination(isPresented: $vm.presentingSignUpView) { SignUpView(loginViewModel: self.vm) }
             }
         }
+        .tint(.accent)
     }
 }
 
 #Preview {
-    LoginView()
+    LoginView(isLoggedIn: .constant(false))
 }

@@ -11,6 +11,7 @@ struct SignUpView: View {
     
     // viewModel
     @ObservedObject private var vm: SignUpViewModel = SignUpViewModel()
+    var loginViewModel: LoginViewModel
     
     var body: some View {
         ZStack {
@@ -52,7 +53,7 @@ struct SignUpView: View {
                             .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    Text("Name")
+                                    Text(vm.nameFieldValue.isEmpty ? "Name" : "")
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .foregroundStyle(.gray)
                                     Color.gray
@@ -71,7 +72,7 @@ struct SignUpView: View {
                             .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    Text("Email")
+                                    Text(vm.emailFieldValue.isEmpty ? "Email" : "")
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .foregroundStyle(.gray)
                                     Color.gray
@@ -90,7 +91,7 @@ struct SignUpView: View {
                             .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    Text("Password")
+                                    Text(vm.passwordFieldValue.isEmpty ? "Password" : "")
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .foregroundStyle(.gray)
                                     Color.gray
@@ -109,7 +110,7 @@ struct SignUpView: View {
                             .foregroundStyle(.black)
                             .background {
                                 VStack(alignment: .leading, spacing: 5) {
-                                    Text("Confirm Password")
+                                    Text(vm.confirmPasswordFieldValue.isEmpty ? "Confirm Password" : "")
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .foregroundStyle(.gray)
                                     Color.gray
@@ -117,6 +118,11 @@ struct SignUpView: View {
                                 }
                             }
                     }
+                    // error
+                    Text(vm.errorMessage)
+                        .font(.caption.bold())
+                        .foregroundStyle(.red)
+                        .opacity(vm.isShowingError ? 1 : 0)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 25)
@@ -125,7 +131,7 @@ struct SignUpView: View {
                 
                 // MARK: create button
                 Button {
-                    
+                    vm.signup(loginViewModel: self.loginViewModel)
                 } label: {
                     Text("Create")
                         .bold()
@@ -135,6 +141,7 @@ struct SignUpView: View {
                         .background { Color.accent.clipShape(RoundedRectangle(cornerRadius: 12)) }
                         .padding(.horizontal, 25)
                 }
+                .padding(.bottom)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background { Color.white.ignoresSafeArea() }
@@ -144,5 +151,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView()
+    SignUpView(loginViewModel: LoginViewModel())
 }

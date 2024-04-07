@@ -6,13 +6,24 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
+    
+    // navigation
+    @Binding var isLoggedIn: Bool
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button("logout") {
+            FireBaseManager.shared.logoutUser()
+            withAnimation(.bouncy) {
+                isLoggedIn = false
+            }
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(isLoggedIn: .constant(false))
 }
