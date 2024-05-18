@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct LoadingView: View {
     
@@ -17,7 +16,7 @@ struct LoadingView: View {
     @State private var logoRotationFactor: Angle = .degrees(0)
     
     // navigation
-    @State private var isLoggedIn: Bool = Auth.auth().currentUser != nil
+    @State private var isLoggedIn: Bool = FireBaseManager.shared.checkIfLoggedIn()
     
     var body: some View {
         // main container
@@ -33,7 +32,7 @@ struct LoadingView: View {
             Color.accent.ignoresSafeArea()
                 .opacity(self.backgroundColorFadeFactor)
             // logo image
-            Image("SkillSprintLogo")
+            Image("app_logo")
                 .resizable()
                 .frame(width: 200, height: 200)
                 .scaleEffect(self.logoScaleFactor)
@@ -44,12 +43,12 @@ struct LoadingView: View {
         .onAppear {
             // spin animation
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                withAnimation(.spring(duration: 0.5).delay(0).repeatCount(3, autoreverses: true)) {
+                withAnimation(.bouncy(duration: 0.5).delay(0).repeatCount(2, autoreverses: true)) {
                     self.logoRotationFactor = .degrees(180)
                 }
             }
             // scale animation
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.75) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.75) {
                 withAnimation(.spring(duration: 0.5)) {
                     self.logoScaleFactor = 0.8
                 }
